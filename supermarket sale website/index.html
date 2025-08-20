@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supermarket Flash Sale</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <h1>🛒 Supermarket Flash Sale</h1>
+
+  <div class="products">
+    <div class="product"> 
+      <h2>10kg Ponni Rice</h2>
+      <p class="price"><span class="original">₹850</span> ₹699 <span class="sale">(Flash Sale!)</span></p>
+      <button onclick="addToCart('10kg Ponni Rice', 699)">Add to Cart</button>
+    </div>  
+    <div class="product">
+      <h2>1L Sunflower Oil</h2>
+      <p class="price"><span class="original">₹190</span> ₹149 <span class="sale">(Flash Sale!)</span></p>
+      <button onclick="addToCart('1L Sunflower Oil', 149)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h2>1kg Sugar</h2>
+      <p class="price"><span class="original">₹50</span> ₹39 <span class="sale">(Flash Sale!)</span></p>
+      <button onclick="addToCart('1kg Sugar', 39)">Add to Cart</button>
+    </div>
+  </div>
+
+  <h2>🛍️ Your Cart</h2>
+  <div id="cart"></div>
+  <button onclick="payNow()" id="payBtn" style="display:none;">Pay with Razorpay</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

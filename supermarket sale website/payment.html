@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Status</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; }
+    .success { color: green; font-size: 24px; }
+    .failed { color: red; font-size: 24px; }
+  </style>
+</head>
+<body>
+
+  <h1>💳 Payment Status</h1>
+
+  <div id="status"></div>
+
+  <script>
+    const paymentSuccess = true; 
+
+    const statusDiv = document.getElementById('status');
+    if (paymentSuccess) {
+      statusDiv.innerHTML = `<p class="success">✅ Payment Successful!</p>`;
+    } else {
+      statusDiv.innerHTML = `<p class="failed">❌ Payment Failed. Please try again.</p>`;
+    }
+  </script>
+
+</body>
+</html>
